@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0</title>
+</head>
+<style>
+    *{margin: 0;padding: 0}
+    body{background-color:  rgb(54, 25, 58)}
+    .box {width: 80px;margin: auto;animation: go 4s infinite;transform-origin: top}
+    .box:before{content:""; width: 6px;height: 270px;margin: auto;background-color: black;display: block}/*绳*/
+    .box .tie{width: 0;height: 0;border-right: 10px solid transparent;border-bottom: 23px solid black
+    ;border-left: 10px solid  transparent;margin: auto;margin-top: -6px;display: block}/*绳结*/
+    .bulb:before{width: 4px;height: 18px;margin: auto;border: 1px solid #171717;border-radius: 50%;
+        box-shadow: 0 0 2px 0 #000000 inset;display: block;content: ''}/*灯芯*/
+    .box .bulb{width: 80px;height: 80px;border-radius: 50%;box-shadow: 0 0 50px 0 white;background-color: white;}/*白色灯*/
+    .box .bulb:hover{background-color:transparent;box-shadow: 0 0 20px 0 white inset}/*移上去的效果*/
+    .rope{width: 3px;height: 150px;margin: auto;background-color: black}/*二阶绳*/
+    .deng{width: 80px;height: 80px;border-radius: 50%;box-shadow: 0 0 50px 0 black;background-color: black}/*黑色灯*/
+    .deng:hover{background-color: transparent;box-shadow: 0 0 20px 0 white inset}
+    .box_2{width: 80px;margin: auto;animation: down 4s infinite;transform-origin: top;animation-delay: 0.4s}
+    @keyframes go {
+        0%{transform: rotate(-30deg)}
+        50%{transform: rotate(30deg)}
+        100%{transform: rotate(-30deg)}
+    }
+    @keyframes down {
+        0%{transform: rotate(-80deg)}
+        50%{transform: rotate(80deg)}
+        100%{transform: rotate(-80deg)}
+    }
+</style>
+<body>
+   <div class="box">
+       <i class="tie"></i>
+       <div class="bulb"></div>
+       <div class="box_2">
+       <div class="rope"></div>
+       <div class="deng"></div>
+       </div>
+   </div>
+</body>
+</html>
